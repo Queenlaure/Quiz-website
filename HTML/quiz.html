@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ.COM</title>
+    <link rel="stylesheet" href="/CSS/quiz.css">
+    <script src="/Javascript/quiz.js"></script>
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <ul>
+                <div class="logo">
+                    <li>Quizer</li>
+                </div>
+                <div class="pages">
+                    <li><a href="/HTML/quiz.html">Quiz</a></li>
+                    <li><a href="/HTML/result.html">Result</a></li>
+                    <li><a href="/HTML/contact.html">Contact Us</a></li>
+                    <li><a href="/HTML/index.html">Home</a></li>
+                </div>
+            </ul>
+        </nav>
+    </div>
+    <div class="container1">
+        <img class="image1" src="/PICS/quiz1.jpg" alt="">
+        <div class="centered">
+            <h1>About Us</h1>
+            <p>The quiz section will provide you with the various topics which you can be tested on</p><br>
+            <p>Each topic has 20 questions</p><br>
+            <ol>
+                <li>10 mcq questions(5 single answers and 5 multiple answers)</li>
+                <li>10 structural questions</li>
+            </ol>
+        </div>
+    </div>
+    <div class="input">
+        <br><br>
+        <h1>Hi there!</h1>
+        <p>Would you like to take a Quiz?, Just kindly key in the information below to continue.</p>
+        <form action="html1.html">
+            <label for="fname">First Name:</label><br>
+            <input type="text" id="fname" name="fname" required><br>
+            <label for="lname">Last Name:</label><br>
+            <input type="text" id="lname" name="fname" required><br>
+        </form>
+        <br><br>
+        <label for="topic">Choose the topic you want to be tested on:</label>
+        <select id="Quizes" onchange="onQuizSelected()">
+            <option value="HTML">HTML</option>
+            <option value="Css">Css</option>
+            <option value="JavaScript">JavaScript</option>
+        </select>
+    </div>
+    <br><br>
+
+    <div id="htmlquestions">
+        <div class="container">
+            <h1>HTML Questions</h1><br>
+            <h2>Section 1 (MCQ)</h2><br>
+            <p>Answer the following questions by clicking on the right answer(s)</p><br>
+            <form name="quiz" onsubmit= "onSubmit()">
+                <div class="mcq1">
+                   <ol>
+                        <li>
+                            <p>What does the abbreviation HTML stand for?</p><br>
+                            <input type="radio" name="answer1" value="A">HyperText Markup Language<br>
+                            <input type="radio" name="answer1" value="B">HighText Markup Language<br>
+                            <input type="radio" name="answer1" value="C">HyperText Markdown Language<br>
+                            <input type="radio" name="answer1" value="D">None<br>
+                        </li>
+                        <li>
+                            <p>How many sizes of headers are available in HTML by default?</p><br>
+                            <input type="radio" name="answer2" value="A">5<br>
+                            <input type="radio" name="answer2" value="B">1<br>
+                            <input type="radio" name="answer2" value="C">3<br>
+                            <input type="radio" name="answer2" value="D">6<br>
+                        </li>
+                        <li>
+                            <p>HTML files are saved by default with the extension?</p><br>
+                            <input type="radio" name="answer3" value="A">.html<br>
+                            <input type="radio" name="answer3" value="B">.h<br>
+                            <input type="radio" name="answer3" value="C">.ht<br>
+                            <input type="radio" name="answer3" value="D">None<br>
+                        </li>
+                        <li>
+                            <p>What are the attributes used to change the size of an image?</p><br>
+                            <input type="radio" name="answer4" value="A">width and height<br>
+                            <input type="radio" name="answer4" value="B">big and small<br>
+                            <input type="radio" name="answer4" value="C">top and bottom<br>
+                            <input type="radio" name="answer4" value="D">None<br>
+                        </li>
+                        <li>
+                            <p>Which attribute is used to provide a unique name to an HTML element?</p><br>
+                            <input type="radio" name="answer5" value="A">id<br>
+                            <input type="radio" name="answer5" value="B">class<br>
+                            <input type="radio" name="answer5" value="C">type<br>
+                            <input type="radio" name="answer5" value="D">none<br>
+                        </li>
+                        <li>
+                            <p>Which of the following properties is used to change the font of text?</p><br>
+                            <input type="checkbox" name="answer6a" value="A">font-family<br>
+                            <input type="checkbox" name="answer6b" value="B">font-size<br>
+                            <input type="checkbox" name="answer6c" value="C">text-align<br>
+                            <input type="checkbox" name="answer6d" value="D">none<br>
+                        </li>
+                        <li>
+                            <p>Which property is used to set border colors in HTML?</p><br>
+                            <input type="checkbox" name="answer7a" value="A">border-color<br>
+                            <input type="checkbox" name="answer7b" value="B">border<br>
+                            <input type="checkbox" name="answer7c" value="C">A and B<br>
+                            <input type="checkbox" name="answer7d" value="D">none<br>
+                        </li>
+                        <li>
+                            <p>Which of the following things are necessary to create an HTML page?</p><br>
+                            <input type="checkbox" name="answer8a" value="A">text editor<br>
+                            <input type="checkbox" name="answer8b" value="B">browser<br>
+                            <input type="checkbox" name="answer8c" value="C">A and B<br>
+                            <input type="checkbox" name="answer8d" value="D">none<br>
+                        </li>
+                        <li>
+                            <p>What is the smallest header in HTML by default?</p><br>
+                            <input type="checkbox" name="answer9a" value="A">h1<br>
+                            <input type="checkbox" name="answer9b" value="B">h2<br>
+                            <input type="checkbox" name="answer9c" value="C">h6<br>
+                            <input type="checkbox" name="answer9d" value="D">h4<br>
+                        </li>
+                        <li>
+                            <p>What tag is used to render an image on a webpage?</p><br>
+                            <input type="checkbox" name="answer10a" value="A">img<br>
+                            <input type="checkbox" name="answer10b" value="B">src<br>
+                            <input type="checkbox" name="answer10c" value="C">image<br>
+                            <input type="checkbox" name="answer10d" value="D">none<br>
+                        </li>
+                 </ol>
+             </div>
+             <br><br>
+             
+            </form> 
+            <br><br>
+
+            <h2>Section 2 (Structural)</h2><br>
+            <p>Answer the following questions by writting the correct answer</p><br>
+            <div class="structural">
+                <ol>
+                    <li>
+                        <p>What is HTML?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What is the difference between HTML elements and tags?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are Attributes and how do you use them?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What is the difference between a block-level element and an inline element?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>When are comments used in HTML?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>How to create a Hyperlink in HTML?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>Name some common lists that are used when designing a page.</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>What is semantic HTML?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>How to create a nested webpage in HTML?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>What is an image map?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="submit">
+            <p>Click the "Submit" button and your work will be submitted</p><br>
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+    <br><br>
+
+
+    <div id="cssquestions">
+        <div class="container">
+            <h1>CSS Questions</h1><br>
+            <h2>Section 1 (MCQ)</h2><br>
+            <p>Answer the following questions by clicking on the right answer(s)</p><br>
+            <div class="mcq">
+                <ol>
+                    <li>
+                        <p>CSS stands for?</p><br>
+                        <input type="radio" name="answer1" value="A">Cascade style sheets<br>
+                        <input type="radio" name="answer1" value="B">Color and style sheets<br>
+                        <input type="radio" name="answer1" value="C">Cascading style sheets<br>
+                        <input type="radio" name="answer1" value="D">None<br>
+                    </li>
+                    <li>
+                        <p>The property in CSS used to change the background color of an element is</p><br>
+                        <input type="radio" name="answer2" value="A">bgcolor<br>
+                        <input type="radio" name="answer2" value="B">color<br>
+                        <input type="radio" name="answer2" value="C">background-color<br>
+                        <input type="radio" name="answer2" value="D">none<br>
+                    </li>
+                    <li>
+                        <p>The CSS property used to control the element's font-size is</p><br>
+                        <input type="radio" name="answer3" value="A">text-style<br>
+                        <input type="radio" name="answer3" value="B">text-size<br>
+                        <input type="radio" name="answer3" value="C">font-size<br>
+                        <input type="radio" name="answer3" value="D">None<br>
+                    </li>
+                    <li>
+                        <p>The HTML attribute used to define the inline styles is</p><br>
+                        <input type="radio" name="answer4" value="A">style<br>
+                        <input type="radio" name="answer4" value="B">styles<br>
+                        <input type="radio" name="answer4" value="C">class<br>
+                        <input type="radio" name="answer4" value="D">None<br>
+                    </li>
+                    <li>
+                        <p>Which of the following CSS property is used to set the background image of an element?</p>
+                        <br>
+                        <input type="radio" name="answer5" value="A">background-attachment<br>
+                        <input type="radio" name="answer5" value="B">background-image<br>
+                        <input type="radio" name="answer5" value="C">background-color<br>
+                        <input type="radio" name="answer5" value="D">none<br>
+                    </li>
+                    <li>
+                        <p>Which of the following property is used as the shorthand property for the padding properties?
+                        </p><br>
+                        <input type="checkbox" name="answer6a" value="A">padding-left<br>
+                        <input type="checkbox" name="answer6b" value="B">padding-right<br>
+                        <input type="checkbox" name="answer6c" value="C">padding<br>
+                        <input type="checkbox" name="answer6d" value="D">all of the above<br>
+                    </li>
+                    <li>
+                        <p>The CSS property used to make the text bold is</p><br>
+                        <input type="checkbox" name="answer7a" value="A">font-weight : bold<br>
+                        <input type="checkbox" name="answer7b" value="B">weight: bold<br>
+                        <input type="checkbox" name="answer7c" value="C">font: bold<br>
+                        <input type="checkbox" name="answer7d" value="D">style: bold<br>
+                    </li>
+                    <li>
+                        <p>Are the negative values allowed in padding property?</p><br>
+                        <input type="checkbox" name="answer8a" value="A">yes<br>
+                        <input type="checkbox" name="answer8b" value="B">no<br>
+                        <input type="checkbox" name="answer8c" value="C">cant say<br>
+                        <input type="checkbox" name="answer8d" value="D">maybe<br>
+                    </li>
+                    <li>
+                        <p>Which of the following property is used as the shorthand property of margin properties?</p>
+                        <br>
+                        <input type="checkbox" name="answer9a" value="A">margin-left<br>
+                        <input type="checkbox" name="answer9b" value="B">margin-right<br>
+                        <input type="checkbox" name="answer9c" value="C">margin<br>
+                        <input type="checkbox" name="answer9d" value="D">none<br>
+                    </li>
+                    <li>
+                        <p>The CSS property used to specify the transparency of an element is</p><br>
+                        <input type="checkbox" name="answer10a" value="A">opacity<br>
+                        <input type="checkbox" name="answer10b" value="B">filter<br>
+                        <input type="checkbox" name="answer10c" value="C">visibility<br>
+                        <input type="checkbox" name="answer10d" value="D">overlay<br>
+                    </li>
+                </ol>
+            </div>
+            <br><br>
+            <h2>Section 2 (Structural)</h2><br>
+            <p>Answer the following questions by writting the correct answer</p><br>
+            <div class="structural">
+                <ol>
+                    <li>
+                        <p>What is CSS?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What is the origin of CSS ?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are the different variations of CSS ?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are the limitations of CSS ?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are the advantages of CSS ?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are CSS frameworks?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>How block elements can be centered with CSS1?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>Who maintains the CSS specifications?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>In how many ways can a CSS be integrated as a web page?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>What benefits and demerits do External Style Sheets have?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="submit">
+            <p>Click the "Submit" button and your work will be submitted</p>
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+    <br><br>
+
+
+    <div id="javascriptquestions">
+        <div class="container">
+            <h1>Javascript Questions</h1><br>
+            <h2>Section 1 (MCQ)</h2><br>
+            <p>Anser the following questions by clicking on the right answer(s)</p><br>
+            <div class="mcq">
+                <ol>
+                    <li>
+                        <p>Javascript is an _______ language?</p><br>
+                        <input type="radio" name="answer1" value="A">object-oriented<br>
+                        <input type="radio" name="answer1" value="B">object-based<br>
+                        <input type="radio" name="answer1" value="C">procedural<br>
+                        <input type="radio" name="answer1" value="D">None<br>
+                    </li>
+                    <li>
+                        <p>Which of the following keywords is used to define a variable in Javascript?</p><br>
+                        <input type="radio" name="answer2" value="A">var<br>
+                        <input type="radio" name="answer2" value="B">let<br>
+                        <input type="radio" name="answer2" value="C">A and B<br>
+                        <input type="radio" name="answer2" value="D">none<br>
+                    </li>
+                    <li>
+                        <p>Which of the following methods is used to access HTML elements using Javascript?</p><br>
+                        <input type="radio" name="answer3" value="A">getElementById()<br>
+                        <input type="radio" name="answer3" value="B">getElementByClassName()<br>
+                        <input type="radio" name="answer3" value="C">A and B<br>
+                        <input type="radio" name="answer3" value="D">None<br>
+                    </li>
+                    <li>
+                        <p>Which of the following methods can be used to display data in some form using Javascript?</p>
+                        <br>
+                        <input type="radio" name="answer4" value="A">document.write()<br>
+                        <input type="radio" name="answer4" value="B">console.log()<br>
+                        <input type="radio" name="answer4" value="C">window.alert()<br>
+                        <input type="radio" name="answer4" value="D">All of the above<br>
+                    </li>
+                    <li>
+                        <p>How can a datatype be declared to be a constant type?</p><br>
+                        <input type="radio" name="answer5" value="A">const<br>
+                        <input type="radio" name="answer5" value="B">var<br>
+                        <input type="radio" name="answer5" value="C">let<br>
+                        <input type="radio" name="answer5" value="D">constant<br>
+                    </li>
+                    <li>
+                        <p>What keyword is used to check whether a given property is valid or not?</p><br>
+                        <input type="checkbox" name="answer6a" value="A">in<br>
+                        <input type="checkbox" name="answer6b" value="B">is in<br>
+                        <input type="checkbox" name="answer6c" value="C">exists<br>
+                        <input type="checkbox" name="answer6d" value="D">lies<br>
+                    </li>
+                    <li>
+                        <p>When an operator’s value is NULL, the typeof returned by the unary operator is:</p><br>
+                        <input type="checkbox" name="answer7a" value="A">boolean<br>
+                        <input type="checkbox" name="answer7b" value="B">undefined<br>
+                        <input type="checkbox" name="answer7c" value="C">object<br>
+                        <input type="checkbox" name="answer7d" value="D">interger<br>
+                    </li>
+                    <li>
+                        <p>The process in which an object or data structure is translated into a format suitable for
+                            transferral over a network, or storage is called?</p><br>
+                        <input type="checkbox" name="answer8a" value="A">Object serialization<br>
+                        <input type="checkbox" name="answer8b" value="B">Object encapsulation<br>
+                        <input type="checkbox" name="answer8c" value="C">Object Inheritance<br>
+                        <input type="checkbox" name="answer8d" value="D">none<br>
+                    </li>
+                    <li>
+                        <p>Which function is used to serialize an object into a JSON string in Javascript?</p><br>
+                        <input type="checkbox" name="answer9a" value="A">stingify()<br>
+                        <input type="checkbox" name="answer9b" value="B">parse()<br>
+                        <input type="checkbox" name="answer9c" value="C">convert()<br>
+                        <input type="checkbox" name="answer9d" value="D">none<br>
+                    </li>
+                    <li>
+                        <p>Which of the following are closures in Javascript?</p><br>
+                        <input type="checkbox" name="answer10a" value="A">variables<br>
+                        <input type="checkbox" name="answer10b" value="B">functions<br>
+                        <input type="checkbox" name="answer10c" value="C">objects<br>
+                        <input type="checkbox" name="answer10d" value="D">all of the above<br>
+                    </li>
+                </ol>
+            </div>
+            <br><br>
+            <h2>Section 2 (Structural)</h2><br>
+            <p>Answer the following questions by writting the correct answer</p><br>
+            <div class="structural">
+                <ol>
+                    <li>
+                        <p>What is the difference between Java & JavaScript?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What is JavaScript?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are the data types supported by JavaScript?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are the features of JavaScript?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>Is JavaScript a case-sensitive language?</p><br>
+                        Answer: <input type="text" name="answer"><br><br>
+                    </li>
+                    <li>
+                        <p>What are the advantages of JavaScript?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>How can you create an object in JavaScript?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>How can you create an Array in JavaScript?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>What is a name function in JavaScript & how to define it?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                    <li>
+                        <p>Can you assign an anonymous function to a variable and pass it as an argument to another
+                            function?</p><br>
+                        <textarea cols="100" rows="5" placeholder="answer..."></textarea><br><br>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="submit">
+            <p>Click the "Submit" button and your work will be submitted</p>
+            <input type="submit" value="Submit">
+        </div>
+    </div>
+
+
+
+    <!-- <div class="footer">
+        <p>Copywrite@2022</p>
+     </div> -->
+</body>
+
+</html>

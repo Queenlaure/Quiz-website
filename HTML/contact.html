@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ.COM</title>
+    <link rel="stylesheet" href="/CSS/contact.css">
+</head>
+
+<body>
+    <div class="header">
+        <nav class="navbar">
+            <ul>
+                <div class="logo">
+                    <li>Quizer</li>
+                </div>
+                <li><a href="/HTML/quiz.html">Quiz</a></li>
+                <li><a href="/HTML/result.html">Result</a></li>
+                <li><a href="/HTML/contact.html">Contact Us</a></li>
+                <li><a href="/HTML/index.html">Home</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <img class="image1" src="/PICS/quiz1.jpg" alt="">
+        <div class="centered">
+            <h1>Quiz</h1>
+            <p><h2>In order to take the quiz, please fill the form below</h2></p>    
+        </div>
+
+        <div class="input">
+            <h1>Fill in your information</h1>
+            <form action="Html1.html">
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br>
+                <label for="number">Number:</label><br>
+                <input type="number" id="number" name="number" required> <br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required> <br>
+                <label for="subject">Subject:</label><br>
+                <input type="text" id="subject" name="subject" required> <br>
+                <label for="message">Message:</label><br>
+                <textarea name="message" id="message" cols="50" rows="5" placeholder="typing..." required></textarea><br>
+                <div>
+                    <p>Click the "Submit" button and the form-data will be successfully received</p>
+                    <input type="submit" value="Submit" id="submit">
+                </div>
+            </form>
+        </div>
+
+        
+        <script>
+            let submit = document.getElementById('submit')
+                function showAlert() {
+                    let myText = "form has been submitted successfully";
+                    alert(myText);
+                }
+
+                submit.addEventListener('click', () => showAlert())
+                localStorage.setItem('name')
+                // console.log(localStorage.getItem())
+        </script>
+        
+        
+        <div class="footer">
+            <p>Copywrite@2022</p>
+        </div>
+
+</body>
+
+</html>
